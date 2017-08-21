@@ -1,82 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Blog Layout</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-    <header class="header">
-        <a href="" title="Blog" class="logo"><img src="" alt="logo" class="logo__img"></a>
-    </header>
+    <!--<a href="" title="Blog" class="logo">racco<span class="logo__image"></span>nblog</a>-->
+    <a href="" title="Blog" class="logo">
+        racco
+        <svg class="logo__svg" aria-hidden="true">
+            <use xlink:href="styles/sprites/sprite.svg#icon-racoon-positive"></use>
+        </svg>
+        nblog
+    </a>
 
-    <nav class="nav">
-        <ul class="navigation">
-            <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
-        </ul>
-    </nav>
+    <ul class="navigation">
+        <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
+    </ul>
 
-    <main class="content">
-        <section class="content__section article">
-            <img src="" alt="" class="article__image">
-            <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
-            <time class="article__time">22:58 Jan 01, 2014</time>
-            <span class="article__author">E. Hyperraccoon</span>
-            <ul class="article__social social">
-                <li class="social__element"><a href="" class="social__link social__link--facebook">Facebook</a></li>
-                <li class="social__element"><a href="" class="social__link social__link--google+">Google+</a></li>
-                <li class="social__element"><a href="" class="social__link social__link--twitter">Twitter</a></li>
-                <li class="social__element"><a href="" class="social__link social__link--vk">VK</a></li>
-                <li class="social__element"><a href="" class="social__link social__link--yandex">Yandex</a></li>
+    <div class="wrapper">
+        <main class="content">
+            <section class="content__section article">
+                <div class="article__image-wrapper">
+                    <img src="images/post1.jpg" alt="post image" class="article__image">
+                </div>
+                <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
+                <svg class="article__time-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
+                </svg>
+                <time class="article__time">
+                    22:58 Jan 01, 2014
+                </time>
+                <svg class="article__author-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
+                </svg>
+                <span class="article__author">E. Hyperraccoon</span>
+                <ul class="article__social social">
+                    <li class="social__element"><a href="" class="social__link social__link--facebook">Facebook</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--google+">Google+</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--twitter">Twitter</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--vk">VK</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--yandex">Yandex</a></li>
+                </ul>
+                <p class="article__text">
+                    Lorem ipsum dolor sit amet.
+                </p>
+            </section>
+            <section class="content__section article">
+                <div class="article__image-wrapper">
+                    <img src="images/post2.jpg" alt="post image" class="article__image">
+                </div>
+                <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
+                <svg class="article__time-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
+                </svg>
+                <time class="article__time">
+                    22:58 Jan 01, 2014
+                </time>
+                <svg class="article__author-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
+                </svg>
+                <span class="article__author">E. Hyperraccoon</span>
+                <ul class="article__social social">
+                    <li class="social__element"><a href="" class="social__link social__link--facebook">Facebook</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--google+">Google+</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--twitter">Twitter</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--vk">VK</a></li>
+                    <li class="social__element"><a href="" class="social__link social__link--yandex">Yandex</a></li>
+                </ul>
+                <p class="article__text">
+                    Lorem ipsum <s>dolor sit</s> amet.
+                </p>
+            </section>
+        </main>
+
+        <aside>
+            <section>
+                <h2>About</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </section>
+            <section>
+                <h2>Some information</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </section>
+            <ul class="tags">
+                <li class="tags__element">Raccoon</li>
+                <li class="tags__element">Raccoon</li>
+                <li class="tags__element">Coon</li>
+                <li class="tags__element">Dog</li>
+                <li class="tags__element">Cat</li>
+                <li class="tags__element">Developer</li>
+                <li class="tags__element">Raccoon</li>
+                <li class="tags__element">Raccoon</li>
+                <li class="tags__element">Coon</li>
+                <li class="tags__element">Dog</li>
+                <li class="tags__element">Cat</li>
+                <li class="tags__element">Developer</li>
             </ul>
-            <p class="article__text">
-                Lorem ipsum dolor sit amet.
-            </p>
-        </section>
-        <section class="content__section article">
-            <img src="" alt="" class="article__image">
-            <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
-            <time class="article__time">22:58 Jan 01, 2014</time>
-            <span class="article__author">E. Hyperraccoon</span>
-            <ul class="article__social social">
-                <li class="social__element social__element--Facebook">Facebook</li>
-                <li class="social__element social__element--Google+">Google+</li>
-                <li class="social__element social__element--Twitter">Twitter</li>
-                <li class="social__element social__element--VK">VK</li>
-                <li class="social__element social__element--HappyHuman">HappyHuman</li>
-            </ul>
-            <p class="article__text">
-                Lorem ipsum <s>dolor sit</s> amet.
-            </p>
-        </section>
-    </main>
-
-    <aside>
-        <section>
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-        </section>
-        <section>
-            <h2>Some information</h2>
-            <p>Lorem ipsum dolor sit amet.</p>
-        </section>
-        <ul class="tags">
-            <li class="tags__element">Raccoon</li>
-            <li class="tags__element">Raccoon</li>
-            <li class="tags__element">Coon</li>
-            <li class="tags__element">Dog</li>
-            <li class="tags__element">Cat</li>
-            <li class="tags__element">Developer</li>
-            <li class="tags__element">Raccoon</li>
-            <li class="tags__element">Raccoon</li>
-            <li class="tags__element">Coon</li>
-            <li class="tags__element">Dog</li>
-            <li class="tags__element">Cat</li>
-            <li class="tags__element">Developer</li>
-        </ul>
-    </aside>
+        </aside>
+    </div>
 </body>
 </html>
