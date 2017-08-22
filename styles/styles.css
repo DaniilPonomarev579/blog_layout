@@ -1,10 +1,19 @@
 @import "reset.css";
+@font-face {
+  font-family: "PT Sans Narrow";
+  src: local("PT Sans Narrow"), url("fonts/PT_Sans-Narrow-Web-Regular.ttf");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans"), url("fonts/JosefinSans-Light.ttf");
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  width: 1368px;
+  width: 1680px;
+  font-family: "PT Sans Narrow";
 }
 .logo {
   height: 4.4rem;
@@ -13,6 +22,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
+  font-family: "Josefin Sans";
+  font-weight: bold;
   text-decoration: none;
   color: #6B9AD0;
 }
@@ -36,6 +47,7 @@ body {
   width: 100%;
   background: #6B9AD0;
   box-shadow: 0 4px 0 #c6defa;
+  font-family: "Josefin Sans";
 }
 .navigation__link {
   display: inline-block;
@@ -57,7 +69,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  top: 40px;
+  top: 38px;
   left: calc(40%);
   width: 0;
   height: 0;
@@ -69,7 +81,7 @@ body {
   content: '';
   display: block;
   position: absolute;
-  top: 44px;
+  top: 42px;
   left: calc(40%);
   width: 0;
   height: 0;
@@ -83,10 +95,10 @@ body {
   margin-bottom: 100px;
 }
 .center-block__content {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .article {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   width: 640px;
   color: #69747c;
 }
@@ -110,6 +122,7 @@ body {
 }
 .article__header {
   padding: 7px 0;
+  font-family: "Josefin Sans";
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -128,7 +141,7 @@ body {
 .article__time-icon {
   width: 1rem;
   height: 1.2rem;
-  vertical-align: -15%;
+  vertical-align: -25%;
   fill: #A6AAAD;
 }
 .article__time-icon use {
@@ -137,7 +150,7 @@ body {
 .article__author-icon {
   width: 1rem;
   height: 1.2rem;
-  vertical-align: -15%;
+  vertical-align: -25%;
   fill: #A6AAAD;
 }
 .article__author-icon use {
@@ -204,6 +217,8 @@ body {
   padding-left: 2rem;
   margin-bottom: 15px;
   border-bottom: 5px solid #6492B6;
+  font-family: "Josefin Sans";
+  font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #6492B6;
@@ -222,14 +237,16 @@ body {
 }
 .note__header--question::before {
   content: '?';
+  font-family: "PT Sans Narrow";
 }
 .note__header--exclamation::before {
   content: '!';
+  font-family: "PT Sans Narrow";
 }
 .tags__element {
   display: inline-block;
   position: relative;
-  padding: 1px 10px;
+  padding: 3px 10px;
   margin: 0 15px 5px 0;
   background: #6492B6;
   color: #fff;
@@ -241,14 +258,14 @@ body {
   right: -12px;
   top: 0;
   border-left: 12px solid #6492B6;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
 }
 .tags__element::after {
   content: '';
   display: block;
   position: absolute;
-  top: 5px;
+  top: 7px;
   right: -2px;
   width: 8px;
   height: 8px;
@@ -258,4 +275,7 @@ body {
 .tags__element:hover {
   cursor: pointer;
   background: #5386ae;
+}
+.tags__element:hover::before {
+  border-left: 12px solid #5386ae;
 }
