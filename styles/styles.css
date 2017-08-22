@@ -1,4 +1,3 @@
-@import "reset.css";
 @font-face {
   font-family: "PT Sans Narrow";
   src: local("PT Sans Narrow"), url("fonts/PT_Sans-Narrow-Web-Regular.ttf");
@@ -8,12 +7,16 @@
   src: local("Josefin Sans"), url("fonts/JosefinSans-Light.ttf");
 }
 body {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   margin: 0 auto;
   width: 1680px;
   font-family: "PT Sans Narrow";
+  background: #ffff00;
 }
 .logo {
   height: 4.4rem;
@@ -40,9 +43,12 @@ body {
   transform: scale(1.55) translateX(-146px) translateY(-2px);
 }
 .navigation {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
   margin-bottom: 50px;
   width: 100%;
   background: #6B9AD0;
@@ -90,12 +96,17 @@ body {
   border-right: 10px solid transparent;
 }
 .center-block {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   margin-bottom: 100px;
 }
 .center-block__content {
   margin-right: 30px;
+}
+.center-block__aside {
+  width: 280px;
 }
 .article {
   margin-bottom: 30px;
@@ -111,13 +122,15 @@ body {
 .article__image-wrapper:hover {
   box-shadow: 0 0 2px #000;
 }
+.article__image-wrapper:active {
+  transform: scale(1.02);
+}
 .article__image {
   min-height: 230px;
   min-width: 640px;
   transition: filter 0.5s ease-in-out;
 }
 .article__image:hover {
-  filter: contrast(1.1);
   cursor: pointer;
 }
 .article__header {
@@ -159,6 +172,9 @@ body {
 .article__social {
   float: right;
 }
+.article__text {
+  text-align: justify;
+}
 .social__element {
   display: inline-block;
 }
@@ -176,36 +192,30 @@ body {
   box-shadow: 0 0 1px #69747c;
   opacity: .7;
 }
-.article__social-icon {
+.social__icon {
   width: 1.3rem;
   height: 1.4rem;
   vertical-align: -15%;
   fill: #fff;
 }
-.article__social-icon--facebook use {
+.social__icon--facebook use {
   transform: scale(0.7) translateX(-480px) translateY(3px);
 }
-.article__social-icon--gplus use {
+.social__icon--gplus use {
   transform: scale(0.7) translateY(3px);
 }
-.article__social-icon--twitter use {
+.social__icon--twitter use {
   transform: scale(0.7) translateX(-239px);
 }
-.article__social-icon--vk use {
+.social__icon--vk use {
   transform: scale(0.6) translateX(-284px) translateY(2px);
 }
-.article__social-icon--yaru use {
+.social__icon--yaru use {
   transform: scale(0.6) translateX(-330px) translateY(2px);
 }
 .social__count {
   position: relative;
   top: -2px;
-}
-.article__text {
-  text-align: justify;
-}
-.center-block__aside {
-  width: 280px;
 }
 .note {
   margin-bottom: 25px;
