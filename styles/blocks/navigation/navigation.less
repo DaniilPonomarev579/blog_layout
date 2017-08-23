@@ -9,4 +9,46 @@
   background: @theme-color;
   box-shadow: 0 4px 0 @theme-shadow-color;
   font-family: @header-font;
+
+  &__link {
+    display: inline-block;
+    padding: 12px 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    &:hover {
+      background: #5d88b9;
+      &::after {
+        border-top: 10px solid #5d88b9;
+      }
+    }
+
+    &--active {
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 38px;
+        left: calc(50% - 10px);
+        width: 0;
+        height: 0;
+        border-top: 10px solid @theme-color;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 42px;
+        left: calc(50% - 10px);
+        width: 0;
+        height: 0;
+        border-top: 10px solid @theme-shadow-color;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+    }
+  }
 }
