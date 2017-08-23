@@ -5,6 +5,15 @@
   text-align: justify;
   color: @font-color;
 
+  &--nav {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  &__symbol {
+    display: none;
+  }
+
   &__header {
     position: relative;
     padding-left: 2rem;
@@ -19,7 +28,7 @@
       content: '';
       position: absolute;
       left: 0;
-      bottom: 0;
+      //bottom: 0;
       display: block;
       width: 1.5rem;
       height: 1.5rem;
@@ -39,6 +48,75 @@
       &::before {
         content: '!';
         font-family: @main-font;
+      }
+    }
+
+    &--nav {
+      display: none;
+    }
+  }
+
+  &__text {
+    &--nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .note {
+    transition: height .5s ease-in-out;
+
+    &--nav {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    &:hover {
+      width: 100%;
+      height: auto;
+      .note__header--nav {
+        display: block;
+      }
+      .note__text--nav {
+        display: block;
+      }
+    }
+
+    &__symbol {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: @theme-shadow-color;
+      color: @theme-color;
+      line-height: 40px;
+      font-family: @header-font;
+      font-weight: bold;
+      font-size: 1.5 * @baseFontSize;
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__header {
+      margin: 0;
+      border: none;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+      &--nav {
+      }
+    }
+
+    &__text {
+      &--nav {
+
       }
     }
   }

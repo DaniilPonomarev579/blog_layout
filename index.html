@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Blog Layout</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -18,16 +19,57 @@
         nblog
     </a>
 
-    <ul class="navigation">
-        <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
-        <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
-        <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
-        <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
-        <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
+    <header class="header">
+        <ul class="header__navigation navigation">
+            <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
+            <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
+            <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
+            <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
+            <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
+        </ul>
+
+        <section class="note note--nav">
+            <div class="note__symbol">?</div>
+            <h2 class="note__header note__header--nav note__header--question">About</h2>
+            <p class="note__text note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                aliquam dicta
+                dignissimos ducimus est impedit libero molestiae quis, quo sint tempora velit voluptas,
+                voluptatibus. Ab consequatur debitis dicta dolores enim error impedit inventore ipsa ipsam molestias
+                mollitia nam, nulla odio optio pariatur porro possimus praesentium quam, reiciendis, similique.
+                Accusantium, labore!</p>
+        </section>
+
+        <section class="note note--nav">
+            <div class="note__symbol">!</div>
+            <h2 class="note__header note__header--nav note__header--exclamation">Some information</h2>
+            <p class="note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at atque dolor
+                eum
+                odit officiis pariatur porro veniam? Aperiam atque, culpa cupiditate dignissimos enim esse fuga
+                fugit, inventore ipsam maxime praesentium repellat similique, temporibus. Ab, accusantium amet
+                dignissimos eos et excepturi fugit hic laudantium nihil odio tempora vero. Perspiciatis,
+                placeat.</p>
+        </section>
+
+    </header>
+
+    <ul class="tags tags--tablet">
+        <li class="tags__element">Raccoon</li>
+        <li class="tags__element">Raccoon</li>
+        <li class="tags__element">Coon</li>
+        <li class="tags__element">Dog</li>
+        <li class="tags__element">Cat</li>
+        <li class="tags__element">Developer</li>
+        <li class="tags__element">Raccoon</li>
+        <li class="tags__element">Raccoon</li>
+        <li class="tags__element">Coon</li>
+        <li class="tags__element">Dog</li>
+        <li class="tags__element">Cat</li>
+        <li class="tags__element">Developer</li>
     </ul>
 
     <div class="center-block">
         <main class="center-block__content content">
+
             <section class="content__section article">
                 <div class="article__image-wrapper">
                     <img src="images/post1.jpg" alt="post image" class="article__image">
@@ -44,6 +86,7 @@
                         <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
                     </svg>
                     <span class="article__author">E. Hyperraccoon</span>
+
                     <ul class="article__social social">
                         <li class="social__element">
                             <a href="" class="social__link social__link--facebook">
@@ -86,6 +129,7 @@
                             </a>
                         </li>
                     </ul>
+
                 </div>
                 <p class="article__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at deleniti dolorem doloremque
@@ -95,6 +139,7 @@
                     corporis dicta, eveniet fugit iure, nemo quia quisquam repellendus reprehenderit soluta.
                 </p>
             </section>
+
             <section class="content__section article">
                 <div class="article__image-wrapper">
                     <img src="images/post2.jpg" alt="post image" class="article__image">
@@ -111,6 +156,7 @@
                         <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
                     </svg>
                     <span class="article__author">E. Hyperraccoon</span>
+
                     <ul class="article__social social">
                         <li class="social__element">
                             <a href="" class="social__link social__link--facebook">
@@ -153,6 +199,7 @@
                             </a>
                         </li>
                     </ul>
+
                 </div>
                 <p class="article__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam cum ducimus excepturi in
@@ -165,7 +212,9 @@
         </main>
 
         <aside class="center-block__aside">
+
             <section class="note">
+                <div class="note__symbol">?</div>
                 <h2 class="note__header note__header--question">About</h2>
                 <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam dicta
                     dignissimos ducimus est impedit libero molestiae quis, quo sint tempora velit voluptas,
@@ -173,7 +222,9 @@
                     mollitia nam, nulla odio optio pariatur porro possimus praesentium quam, reiciendis, similique.
                     Accusantium, labore!</p>
             </section>
+
             <section class="note">
+                <div class="note__symbol">!</div>
                 <h2 class="note__header note__header--exclamation">Some information</h2>
                 <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, at atque dolor eum
                     odit officiis pariatur porro veniam? Aperiam atque, culpa cupiditate dignissimos enim esse fuga
@@ -181,6 +232,7 @@
                     dignissimos eos et excepturi fugit hic laudantium nihil odio tempora vero. Perspiciatis,
                     placeat.</p>
             </section>
+
             <ul class="tags">
                 <li class="tags__element">Raccoon</li>
                 <li class="tags__element">Raccoon</li>
