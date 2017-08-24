@@ -1,13 +1,21 @@
 @import "../../variables.less";
 
 .header {
-  display: flex;
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: flex-start;
   position: sticky;
   top: 0;
   z-index: 1;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
   width: 100%;
-  transition: all .5s ease-in-out;
+  margin-bottom: 50px;
+  //height: 40px;
+  //transition: all .5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    margin-bottom: 0;
+  }
 }

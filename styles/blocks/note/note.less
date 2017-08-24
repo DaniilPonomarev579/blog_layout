@@ -66,22 +66,29 @@
 @media screen and (max-width: 1000px) {
   .note {
     transition: height .5s ease-in-out;
+    background: #fff;
+    margin-top: 30px;
+    //z-index: 2;
 
     &--nav {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 0;
+      height: 0;
       overflow: hidden;
     }
 
     &:hover {
+      margin: 4px 40px 20px;
       width: 100%;
       height: auto;
       .note__header--nav {
-        display: block;
+        display: inline-block;
+        background: lighten(@theme-shadow-color, 5%);
       }
       .note__text--nav {
         display: block;
+        background: #fff;
+        padding: 20px;
       }
     }
 
@@ -89,21 +96,38 @@
       display: block;
       width: 40px;
       height: 40px;
-      background: @theme-shadow-color;
+      background: darken(@theme-shadow-color, 10%);
       color: @theme-color;
       line-height: 40px;
       font-family: @header-font;
       font-weight: bold;
       font-size: 1.5 * @baseFontSize;
       text-align: center;
+      box-shadow: 0 4px 0 @theme-shadow-color;
       &:hover {
         cursor: pointer;
+      }
+
+      &--question {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &--exclamation {
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
 
     &__header {
       margin: 0;
       border: none;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      position: absolute;
       &::before {
         display: none;
       }
@@ -111,6 +135,18 @@
         display: none;
       }
       &--nav {
+      }
+
+      &--question {
+        top: 83px;
+        left: -39px;
+        transform: rotate(-90deg);
+      }
+
+      &--exclamation {
+        top: 165px;
+        right: -121px;
+        transform: rotate(90deg);
       }
     }
 
