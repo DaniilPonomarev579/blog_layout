@@ -11,14 +11,14 @@
 
   &__link {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 19px 33px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     &:hover {
       background: #5d88b9;
       &::after {
-        border-top: 10px solid #5d88b9;
+        border-top: 8px solid #5d88b9;
       }
     }
 
@@ -28,11 +28,11 @@
         content: '';
         display: block;
         position: absolute;
-        top: 38px;
+        top: 53px;
         left: calc(50% - 10px);
         width: 0;
         height: 0;
-        border-top: 10px solid @theme-color;
+        border-top: 8px solid @theme-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
       }
@@ -40,20 +40,18 @@
         content: '';
         display: block;
         position: absolute;
-        top: 42px;
+        top: 57px;
         left: calc(50% - 10px);
         width: 0;
         height: 0;
-        border-top: 10px solid @theme-shadow-color;
+        border-top: 8px solid @theme-shadow-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
       }
     }
   }
-}
 
-@media screen and (max-width: 1000px) {
-  .navigation {
+  @media @tablet {
     //justify-content: space-around;
   }
 }

@@ -1,7 +1,7 @@
 @import "../../variables.less";
 
 .article {
-  margin-bottom: 30px;
+  margin-bottom: 55px;
   width: 640px;
   color: @font-color;
 
@@ -16,28 +16,27 @@
     height: 1.2rem;
     vertical-align: -25%;
     fill: @decor-color;
-    use {
-      transform: scale(.5) translateX(-530px) translateY(3px);
-    }
   }
 
   &__header {
-    padding: 7px 0;
+    padding: 12px 0;
     font-family: @header-font;
-    font-size: 1.2 * @baseFontSize;
+    font-size: 1.3 * @baseFontSize;
     font-weight: bold;
   }
 
   &__image {
-    width: 100%;
-    object-fit: cover;
+    min-height: 230px;
+    min-width: 640px;
     transition: filter .5s ease-in-out;
+    align-self: center;
     &:hover {
       cursor: pointer;
     }
   }
 
   &__image-wrapper {
+    display: flex;
     height: 230px;
     width: 640px;
     overflow: hidden;
@@ -59,10 +58,12 @@
 
   &__social {
     float: right;
+    margin-top: -3px;
   }
 
   &__text {
     text-align: justify;
+    line-height: 1.125rem;
   }
 
   &__time {
@@ -74,8 +75,5 @@
     height: 1.2rem;
     vertical-align: -25%;
     fill: @decor-color;
-    use {
-      transform: scale(.5) translateX(-431px) translateY(3px);
-    }
   }
 }

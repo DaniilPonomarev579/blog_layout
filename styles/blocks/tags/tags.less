@@ -3,24 +3,30 @@
 .tags {
   &--tablet {
     display: none;
+
+    @media @tablet {
+      display: block;
+      margin: 10px 40px 30px;
+      text-align: center;
+    }
   }
 
   &__element {
     display: inline-block;
     position: relative;
-    padding: 3px 10px;
-    margin: 0 15px 5px 0;
+    padding: 2px 17px 2px 14px;
+    margin: 0 11px 4px 0;
     background: @decor-dark;
     color: #fff;
     &::before {
       content: '';
       display: block;
       position: absolute;
-      right: -12px;
+      right: -11px;
       top: 0;
-      border-left: 12px solid @decor-dark;
-      border-top: 11px solid transparent;
-      border-bottom: 11px solid transparent;
+      border-left: 11px solid @decor-dark;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
     }
     &::after {
       content: '';
@@ -37,18 +43,8 @@
       cursor: pointer;
       background: darken(@decor-dark, 5%);
       &::before {
-        border-left: 12px solid darken(@decor-dark, 5%);
+        border-left: 11px solid darken(@decor-dark, 5%);
       }
-    }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .tags {
-    &--tablet {
-      display: block;
-      margin: 10px 40px 30px;
-      text-align: center;
     }
   }
 }
