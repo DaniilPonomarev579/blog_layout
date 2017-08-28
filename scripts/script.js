@@ -1,24 +1,26 @@
-var headerHeight;
-var textHeight;
-var header;
-var text;
-var firstClick = true;
+let headerHeight;
+let textHeight;
+let header;
+let text;
+let firstClick = true;
 
 function determineChildren(note) {
     'use strict';
 
-    for (var child of note.children) {
-        var className = child.className;
+    for (let child of note.children) {
+        let className = child.className;
+
         if (className.indexOf('note__header') >= 0) {
             header = child;
         }
+
         if (className.indexOf('note__text') >= 0) {
             text = child;
         }
     }
 }
 
-function countNoteHeight(note) {
+function countNoteHeight() {
     'use strict';
 
     headerHeight = +getComputedStyle(header)
@@ -53,19 +55,27 @@ function countNoteHeight(note) {
 function changeNoteHeight(note) {
     'use strict';
 
-    if (headerHeight >= textHeight) {
-        text.style.paddingTop =
-            (headerHeight -
+    let difference;
+
+    note.parentNode.style.height = headerHeight + "px";
+    note.style.height = headerHeight + "px";
+
+    if (headerHeight > textHeight) {
+        // console.log(headerHeight + ' ' + textHeight + ' 1');
+
+        difference = (headerHeight -
             (+getComputedStyle(text)
                 .height
                 .toString()
-                .slice(0, getComputedStyle(text).height.toString().indexOf('p')))) / 2 + 'px';
-        text.style.paddingBottom =
-            (headerHeight -
-            (+getComputedStyle(text)
-                .height
-                .toString()
-                .slice(0, getComputedStyle(text).height.toString().indexOf('p')))) / 2 + 'px';
+                .slice(0, -2))) / 2 + 'px';
+        text.style.paddingTop = difference;
+
+        text.style.paddingBottom = difference;
+    }
+
+    if (headerHeight < textHeight - 2) {
+        note.parentNode.style.height = textHeight + "px";
+        note.style.height = textHeight + "px";
     }
 }
 
@@ -76,23 +86,21 @@ function clickNote() {
 
     if (firstClick) {
         header.style.display = "inline-block";
-        console.log(1);
 
     }
     else {
         header.style.display = "none";
-        console.log(2);
     }
 
-    countNoteHeight(this);
+    countNoteHeight();
 
     if (firstClick) {
         firstClick = false;
 
         header.style.opacity = 1;
-        this.parentNode.style.height = headerHeight + "px";
-        this.style.height = headerHeight + "px";
         changeNoteHeight(this);
+
+        // console.log(headerHeight + ' ' + textHeight);
     }
     else {
         firstClick = true;
@@ -106,9 +114,9 @@ function clickNote() {
 function addEventListeners() {
     'use strict';
 
-    var notes = document.querySelectorAll('.note--nav');
+    const notes = document.querySelectorAll('.note--nav');
 
-    for (var note of notes) {
+    for (let note of notes) {
         note.addEventListener('click', clickNote);
     }
 }

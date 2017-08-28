@@ -13,8 +13,14 @@
 
   &__element {
     display: inline-block;
+
     @media @tablet {
       display: block;
+      margin-bottom: 5px;
+    }
+
+    @media @mobile {
+      display: inline-block;
     }
   }
 
@@ -34,30 +40,55 @@
     border-radius: 3px;
     background: @decor-color;
     color: #fff;
-    opacity: .5;
+    //opacity: .5;
+
     &:hover {
       box-shadow: 0 0 1px @font-color;
-      opacity: .7;
+      //opacity: 1;
     }
 
     &--facebook:hover {
-      background: #3b5998;
+      background: @color-facebook;
     }
 
     &--gplus:hover {
-      background: #dd4b39;
+      background: @color-gplus;
     }
 
     &--twitter:hover {
-      background: #00aced;
+      background: @color-twitter;
     }
 
     &--vk:hover {
-      background: #45668e;
+      background: @color-vk;
     }
 
     &--yaru:hover {
-      background: #f00;
+      background: @color-yaru;
+    }
+
+    @media @tablet {
+      //opacity: 1;
+
+      &--facebook {
+        background: @color-facebook;
+      }
+
+      &--gplus {
+        background: @color-gplus;
+      }
+
+      &--twitter {
+        background: @color-twitter;
+      }
+
+      &--vk {
+        background: @color-vk;
+      }
+
+      &--yaru {
+        background: @color-yaru;
+      }
     }
   }
 }

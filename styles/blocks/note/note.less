@@ -29,11 +29,11 @@
 
     @media @tablet {
       display: block;
-      width: 54px;
-      height: 54px;
+      width: 56px;
+      height: 56px;
       background: lighten(@theme-color, 10%);
       color: @theme-color;
-      line-height: 54px;
+      line-height: 56px;
       font-family: @header-font;
       font-weight: bold;
       font-size: 2 * @baseFontSize;
@@ -45,7 +45,7 @@
         z-index: 2;
         display: block;
         position: absolute;
-        top: 54px;
+        top: 56px;
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
@@ -60,7 +60,7 @@
         z-index: 2;
         display: block;
         position: absolute;
-        top: 58px;
+        top: 60px;
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
@@ -133,14 +133,15 @@
     font-size: 1.25 * @baseFontSize;
     text-transform: uppercase;
     color: @decor-dark;
+    //box-sizing: border-box;
     //transition: height .5s;
 
     @media @tablet {
       display: none;
       margin: 0;
       border: none;
-      height: 54px;
-      line-height: 54px;
+      height: 56px;
+      line-height: 56px;
       position: absolute;
       padding: 0 20px;
       &--nav {
@@ -176,8 +177,8 @@
       }
 
       @media @tablet {
-        top: 83px;
-        left: -25px;
+        top: 84px;
+        left: -24px;
         transform: rotate(-90deg);
       }
     }
@@ -189,8 +190,8 @@
       }
 
       @media @tablet {
-        top: 151px;
-        right: -93px;
+        top: 152px;
+        right: -92px;
         transform: rotate(90deg);
       }
     }
@@ -198,6 +199,7 @@
 
   &__text {
     line-height: 1.125rem;
+    //box-sizing: border-box;
     &--nav {
       display: none;
 

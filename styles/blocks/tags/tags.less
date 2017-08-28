@@ -1,6 +1,8 @@
 @import "../../variables.less";
 
 .tags {
+  margin-right: -11px;
+
   &--tablet {
     display: none;
 
@@ -14,7 +16,9 @@
   &__element {
     display: inline-block;
     position: relative;
-    padding: 2px 17px 2px 14px;
+    height: 1.22rem;
+    line-height: 1.22rem;
+    padding: 0 19px 0 14px;
     margin: 0 11px 4px 0;
     background: @decor-dark;
     color: #fff;
@@ -22,20 +26,20 @@
       content: '';
       display: block;
       position: absolute;
-      right: -11px;
+      right: -0.625rem;
       top: 0;
-      border-left: 11px solid @decor-dark;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
+      border-left: 0.625rem solid @decor-dark;
+      border-top: 0.625rem solid transparent;
+      border-bottom: 0.625rem solid transparent;
     }
     &::after {
       content: '';
       display: block;
       position: absolute;
-      top: 7px;
-      right: -2px;
-      width: 8px;
-      height: 8px;
+      top: 0.375rem;
+      right: -0.125rem;
+      width: 0.5rem;
+      height: 0.5rem;
       border-radius: 50%;
       background: #fff;
     }
@@ -43,7 +47,7 @@
       cursor: pointer;
       background: darken(@decor-dark, 5%);
       &::before {
-        border-left: 11px solid darken(@decor-dark, 5%);
+        border-left: 0.625rem solid darken(@decor-dark, 5%);
       }
     }
   }
