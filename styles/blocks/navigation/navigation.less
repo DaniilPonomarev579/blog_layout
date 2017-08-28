@@ -9,17 +9,44 @@
   background: @theme-color;
   box-shadow: 0 4px 0 @theme-shadow-color;
 
+  @media @tablet {
+
+  }
+
+  &__element {
+    @media @tablet {
+      width: 12%;
+      border: 1px solid red;
+    }
+
+    @media @mobile {
+      //font-size: .5rem;
+      border: 1px solid green;
+    }
+  }
+
   &__link {
     display: inline-block;
     padding: 19px 33px;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
+
     &:hover {
       background: #5d88b9;
       &::after {
         border-top: 8px solid #5d88b9;
       }
+    }
+
+    @media @tablet {
+      padding: 19px 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    @media @mobile {
+      padding: 9px 0;
     }
 
     &--active {
@@ -29,7 +56,7 @@
         display: block;
         position: absolute;
         top: 53px;
-        left: calc(50% - 10px);
+        left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
         border-top: 8px solid @theme-color;
@@ -41,7 +68,7 @@
         display: block;
         position: absolute;
         top: 57px;
-        left: calc(50% - 10px);
+        left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
         border-top: 8px solid @theme-shadow-color;
@@ -49,9 +76,5 @@
         border-right: 10px solid transparent;
       }
     }
-  }
-
-  @media @tablet {
-    //justify-content: space-around;
   }
 }

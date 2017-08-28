@@ -1,6 +1,11 @@
 @import "../../variables.less";
 
 .social {
+
+  @media @tablet {
+    text-align: right;
+  }
+
   &__count {
     position: relative;
     top: -4px;
@@ -8,6 +13,9 @@
 
   &__element {
     display: inline-block;
+    @media @tablet {
+      display: block;
+    }
   }
 
   &__icon {

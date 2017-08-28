@@ -13,6 +13,13 @@
   text-decoration: none;
   color: @theme-color;
 
+  @media @mobile {
+    height: 53px;
+    width: 320px;
+    line-height: 53px;
+    font-size: 1.5 * @baseFontSize;
+  }
+
   &__svg {
     width: 3.7rem;
     height: 3.7rem;
@@ -21,5 +28,15 @@
     border-radius: 50%;
     background: @theme-color;
     fill: #fff;
+
+    @media @mobile {
+      width: 2.125rem;
+      height: 2.125rem;
+      font-size: 1.5 * @baseFontSize;
+      margin: 0;
+      use {
+        transform: scale(.6);
+      }
+    }
   }
 }
