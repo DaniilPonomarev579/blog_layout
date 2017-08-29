@@ -11,6 +11,26 @@
       margin: 40px 40px 30px;
       text-align: center;
     }
+
+    @media @mobile {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media @mobile {
+      display: block;
+      //margin: 40px 40px 30px;
+      text-align: center;
+      height: 0;
+      overflow: hidden;
+      transition: height .5s ease-in-out;
+      background: #fff;
+      //padding: 40px 3% 30px;
+      background: @mobile-menu-color;
+    }
   }
 
   &__element {
@@ -50,5 +70,74 @@
         border-left: 0.625rem solid darken(@decor-dark, 5%);
       }
     }
+  }
+
+  &__symbol {
+    display: none;
+
+    @media @tablet {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 74px;
+      width: 34px;
+      height: 34px;
+      background: lighten(@theme-color, 10%);
+      color: @theme-color;
+      line-height: 34px;
+      //font-family: @header-font;
+      //font-weight: bold;
+      //font-size: 1.25 * @baseFontSize;
+      text-align: center;
+      box-shadow: 0 4px 0 @theme-shadow-color;
+
+      &::after {
+        content: '';
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 34px;
+        left: ~"calc(50% - 10px)";
+        width: 0;
+        height: 0;
+        border-top: 0px solid lighten(@theme-color, 10%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transition: border .2s;
+      }
+
+      &::before {
+        content: '';
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 38px;
+        left: ~"calc(50% - 10px)";
+        width: 0;
+        height: 0;
+        border-top: 0px solid @theme-shadow-color;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transition: border .2s;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          border-top: 8px solid lighten(@theme-color, 10%);
+        }
+
+        &::before {
+          border-top: 8px solid @theme-shadow-color;
+        }
+      }
+    }
+  }
+
+  &__icon-tag {
+    width: 34px;
+    height: 34px;
+    fill: @theme-color;
   }
 }

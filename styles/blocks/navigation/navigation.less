@@ -16,12 +16,10 @@
   &__element {
     @media @tablet {
       width: 12%;
-      border: 1px solid red;
     }
 
     @media @mobile {
       //font-size: .5rem;
-      border: 1px solid green;
     }
   }
 
@@ -62,6 +60,10 @@
         border-top: 8px solid @theme-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
+
+        @media @mobile {
+          top: 34px;
+        }
       }
       &::before {
         content: '';
@@ -74,6 +76,10 @@
         border-top: 8px solid @theme-shadow-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
+
+        @media @mobile {
+          top: 38px;
+        }
       }
     }
   }
