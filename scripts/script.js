@@ -12,14 +12,16 @@
         'use strict';
 
         for (let child of note.children) {
-            let className = child.className;
+            if (child.tagName !== 'svg') {
+                let className = child.className;
 
-            if (className.indexOf('note__header') >= 0) {
-                header = child;
-            }
+                if (className.indexOf('note__header--tablet') >= 0) {
+                    header = child;
+                }
 
-            if (className.indexOf('note__text') >= 0) {
-                text = child;
+                if (className.indexOf('note__text') >= 0) {
+                    text = child;
+                }
             }
         }
     }
@@ -75,61 +77,75 @@
         }
     }
 
-    function clickNote() {
+    function changeHeightForMobile(element, elementSymbol) {
+        let tmpElement = currentElement;
+
         if (!currentElement) {
-            console.log('!currentElement');
-            currentElement = this;
-            determineChildren(this);
-            // header.style.display = "inline-block";
-            header.style.opacity = 1;
-            header.style.height = "auto";
-            countNoteHeight();
-            changeNoteHeightForTablet(this);
-        } else {
-            console.log('else');
-            determineChildren(currentElement);
-            header.style.opacity = 0;
-            header.style.height = "0";
-            // header.style.display = "none";
-            currentElement.parentNode.style.height = "0";
-            currentElement.style.height = "0";
-            if (this !== currentElement) {
-                console.log(this + ' ' + currentElement);
-                currentElement = null;
-                this.click();
+            currentElement = element;
+            element.style.height = "auto";
+            if (element.className.indexOf('tags') >= 0) {
+                element.parentNode.style.height = +getComputedStyle(element).height.toString().slice(0, -2) + 50 + "px";
+            } else {
+                element.parentNode.style.height = +getComputedStyle(element).height.toString().slice(0, -2) + 20 + "px";
             }
-            // currentElement = null;
+            element.style.height = getComputedStyle(element).height;
+        } else {
+            currentElement.style.height = "0";
+            currentElement.parentNode.style.height = "0";
+            currentElement = null;
+            if (element !== tmpElement) {
+                elementSymbol.click();
+            }
+        }
+    }
+
+    function clickNoteSymbol() {
+        if (document.body.clientWidth > 650) {
+            let note = this.parentNode;
+            let tmpNote = currentElement;
+
+            if (!currentElement) {
+                currentElement = note;
+                determineChildren(note);
+                header.style.opacity = 1;
+                header.style.height = "auto";
+                header.style.height = getComputedStyle(header).height;
+                countNoteHeight();
+                changeNoteHeightForTablet(note);
+            } else {
+                determineChildren(currentElement);
+                header.style.opacity = 0;
+                header.style.height = "0";
+                currentElement.parentNode.style.height = "0";
+                currentElement.style.height = "0";
+                currentElement = null;
+                if (note !== tmpNote) {
+                    this.click();
+                }
+            }
+        } else {
+            changeHeightForMobile(this.parentNode, this);
         }
     }
 
     function clickTags() {
-        let tags = this;
-
-        console.log(this.clientWidth);
-        if (!currentElement) {
-            currentElement = this;
-            tags.style.height = "auto";
-            tags.style.padding = "40px 3% 30px";
-            tags.style.height = getComputedStyle(tags).height;
-            tags.parentNode.style.height = +getComputedStyle(tags).height.toString().slice(0, -2) + 100 + "px";
-        } else {
-            currentElement = null;
-            tags.style.height = "0";
-            tags.parentNode.style.height = "0";
-            setTimeout(function () {
-                tags.style.padding = "0";
-            }, 500);
-        }
+        changeHeightForMobile(this.parentNode, this);
     }
 
     function addEventListeners() {
-        let notes = document.querySelectorAll('.note--nav');
+        let noteSymbols = document.querySelectorAll('.note__symbol');
+        let noteIcons = document.querySelectorAll('.note__icon-arrow');
 
-        for (let note of notes) {
-            note.addEventListener('click', clickNote);
+        for (let note of noteSymbols) {
+            note.addEventListener('click', clickNoteSymbol);
         }
 
-        document.querySelector('.tags--mobile').addEventListener('click', clickTags);
+        for (let icon of noteIcons) {
+            icon.addEventListener('click', clickNoteSymbol);
+        }
+
+        document.querySelector('.tags__symbol').addEventListener('click', clickTags);
+        document.querySelector('.tags__icon-arrow').addEventListener('click', clickNoteSymbol);
     }
 
     addEventListeners();

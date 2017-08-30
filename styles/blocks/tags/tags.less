@@ -27,9 +27,9 @@
       height: 0;
       overflow: hidden;
       transition: height .5s ease-in-out;
-      background: #fff;
       //padding: 40px 3% 30px;
       background: @mobile-menu-color;
+      padding: 40px 3% 0px;
     }
   }
 
@@ -139,5 +139,19 @@
     width: 34px;
     height: 34px;
     fill: @theme-color;
+  }
+
+  &__icon-arrow {
+    display: none;
+
+    @media @mobile {
+      display: inline-block;
+      position: static;
+      width: 45px;
+      height: 45px;
+      fill: #fff;
+      float: right;
+      cursor: pointer;
+    }
   }
 }

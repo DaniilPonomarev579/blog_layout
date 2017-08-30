@@ -9,8 +9,20 @@
   background: @theme-color;
   box-shadow: 0 4px 0 @theme-shadow-color;
 
-  @media @tablet {
+  @media @mobile {
+    height: 34px;
+  }
 
+  &--mobile {
+    display: none;
+
+    @media @mobile {
+      display: flex;
+      margin-top: -40px;
+      flex-direction: column;
+      height: auto;
+      box-shadow: none;
+    }
   }
 
   &__element {
@@ -19,7 +31,17 @@
     }
 
     @media @mobile {
-      //font-size: .5rem;
+      display: none;
+
+      &:last-child > .navigation__link {
+        border: none;
+      }
+    }
+
+    &--mobile {
+      display: block;
+      width: 100%;
+      background: @mobile-menu-color;
     }
   }
 
@@ -44,11 +66,21 @@
     }
 
     @media @mobile {
+      margin: 0 5%;
+      width: 90%;
       padding: 9px 0;
+      border-bottom: 1px solid #fff;
+      color: @theme-color;
+      font-weight: bold;
     }
 
     &--active {
       position: relative;
+
+      @media @mobile {
+
+      }
+
       &::after {
         content: '';
         display: block;
@@ -62,7 +94,7 @@
         border-right: 10px solid transparent;
 
         @media @mobile {
-          top: 34px;
+          display: none;
         }
       }
       &::before {
@@ -78,7 +110,62 @@
         border-right: 10px solid transparent;
 
         @media @mobile {
-          top: 38px;
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__icon-menu {
+    display: none;
+
+    @media @mobile {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+      fill: @mobile-menu-color;
+      position: absolute;
+      right: 0;
+
+      &::after {
+        content: '';
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 34px;
+        left: ~"calc(50% - 10px)";
+        width: 0;
+        height: 0;
+        border-top: 0px solid lighten(@theme-color, 10%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transition: border .2s;
+      }
+
+      &::before {
+        content: '';
+        z-index: 2;
+        display: block;
+        position: absolute;
+        top: 38px;
+        left: ~"calc(50% - 10px)";
+        width: 0;
+        height: 0;
+        border-top: 0px solid @theme-shadow-color;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transition: border .2s;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          border-top: 8px solid lighten(@theme-color, 10%);
+        }
+
+        &::before {
+          border-top: 8px solid @theme-shadow-color;
         }
       }
     }

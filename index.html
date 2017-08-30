@@ -10,250 +10,65 @@
 </head>
 
 <body>
-    <!--<a href="" title="Blog" class="logo">racco<span class="logo__image"></span>nblog</a>-->
-    <a href="" title="Blog" class="logo">
-        racco
-        <svg class="logo__svg" aria-hidden="true">
-            <use xlink:href="styles/sprites/sprite.svg#icon-racoon-positive"></use>
+<!--<a href="" title="Blog" class="logo">racco<span class="logo__image"></span>nblog</a>-->
+<a href="" title="Blog" class="logo">
+    racco
+    <svg class="logo__svg" aria-hidden="true">
+        <use xlink:href="styles/sprites/sprite.svg#icon-racoon-positive"></use>
+    </svg>
+    nblog
+</a>
+
+<header class="header">
+    <ul class="header__navigation navigation">
+        <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
+        <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
+        <svg class="navigation__icon-menu" aria-hidden="true">
+            <use xlink:href="styles/sprites/sprite.svg#icon-menu"></use>
         </svg>
-        nblog
-    </a>
-
-    <header class="header">
-        <ul class="header__navigation navigation">
-            <li class="navigation__element"><a href="" class="navigation__link">JavaScript</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">CSS</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
-            <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
-        </ul>
-
-        <section class="info">
-            <div class="info__notes-wrapper">
-                <section class="info__note note note--nav note--nav-question">
-                    <div class="note__symbol note__symbol--question">?</div>
-                    <h2 class="note__header note__header--nav note__header--question">About</h2>
-                    <p class="note__text note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
-                        enim esse eum facilis laudantium nihil optio perferendis quaerat qui repellat sed, sequi tempora
-                        tempore totam voluptatem? Alias aliquid amet animi assumenda autem beatae consequuntur cum eaque
-                        expedita illo nobis numquam praesentium quia saepe sequi, similique sunt voluptate? Beatae eius
-                        fuga praesentium quae quisquam quos recusandae ut. Labore.</p>
-                </section>
-
-                <section class="info__note note note--nav note--nav-exclamation">
-                    <div class="note__symbol note__symbol--exclamation">!</div>
-                    <h2 class="note__header note__header--nav note__header--exclamation">Some information</h2>
-                    <p class="note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
-                        aliquam, amet assumenda blanditiis consequatur cupiditate deserunt error expedita explicabo
-                        fugiat ipsum itaque magnam, maiores modi molestiae nobis, odit porro quaerat quasi quia
-                        recusandae reiciendis repellendus sed similique temporibus tenetur voluptates.
-                    </p>
-                </section>
-
-                <ul class="tags tags--mobile">
-                    <div class="tags__symbol">
-                        <svg class="tags__icon-tag" aria-hidden="true">
-                            <use xlink:href="styles/sprites/sprite.svg#icon-tag"></use>
-                        </svg>
-                    </div>
-                    <li class="tags__element">Raccoon</li>
-                    <li class="tags__element">Raccoon</li>
-                    <li class="tags__element">Coon</li>
-                    <li class="tags__element">Dog</li>
-                    <li class="tags__element">Cat</li>
-                    <li class="tags__element">Developer</li>
-                    <li class="tags__element">Raccoon</li>
-                    <li class="tags__element">Raccoon</li>
-                    <li class="tags__element">Coon</li>
-                    <li class="tags__element">Dog</li>
-                    <li class="tags__element">Cat</li>
-                    <li class="tags__element">Developer</li>
-                </ul>
-            </div>
-        </section>
-    </header>
-
-    <ul class="tags tags--tablet">
-        <li class="tags__element">Raccoon</li>
-        <li class="tags__element">Raccoon</li>
-        <li class="tags__element">Coon</li>
-        <li class="tags__element">Dog</li>
-        <li class="tags__element">Cat</li>
-        <li class="tags__element">Developer</li>
-        <li class="tags__element">Raccoon</li>
-        <li class="tags__element">Raccoon</li>
-        <li class="tags__element">Coon</li>
-        <li class="tags__element">Dog</li>
-        <li class="tags__element">Cat</li>
-        <li class="tags__element">Developer</li>
     </ul>
 
-    <div class="center-block">
-        <main class="center-block__content content">
+    <section class="info">
+        <div class="info__notes-wrapper">
+            <section class="info__note note note--nav note--nav-question">
+                <div class="note__symbol note__symbol--question">?</div>
+                <h2 class="note__header note__header--nav note__header--question note__header--tablet">About</h2>
+                <p class="note__text note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
+                    enim esse eum facilis laudantium nihil optio perferendis quaerat qui repellat sed, sequi tempora
+                    tempore totam voluptatem? Alias aliquid amet animi assumenda autem beatae consequuntur cum eaque
+                    expedita illo nobis numquam praesentium quia saepe sequi, similique sunt voluptate? Beatae eius
+                    fuga praesentium quae quisquam quos recusandae ut. Labore.</p>
+                <svg class="note__icon-arrow" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-arrow"></use>
+                </svg>
+                <h2 class="note__header note__header--nav note__header--question note__header--mobile">About</h2>
+            </section>
 
-            <section class="content__section article">
-                <div class="article__image-wrapper">
-                    <img src="images/post1.jpg" alt="post image" class="article__image">
-                </div>
-                <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
-                <div class="article__info-wrapper">
-                    <svg class="article__time-icon" aria-hidden="true">
-                        <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
-                    </svg>
-                    <time class="article__time">
-                        22:58 Jan 01, 2014
-                    </time>
-                    <svg class="article__author-icon" aria-hidden="true">
-                        <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
-                    </svg>
-                    <span class="article__author">E. Hyperraccoon</span>
-
-                    <ul class="article__social social">
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--facebook">
-                                <svg class="social__icon social__icon--facebook" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-facebook"></use>
-                                </svg>
-                                <span class="social__count social__count--facebook">16</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--gplus">
-                                <svg class="social__icon social__icon--gplus" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-gplus"></use>
-                                </svg>
-                                <span class="social__count social__count--gplus">7</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--twitter">
-                                <svg class="social__icon social__icon--twitter" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-twitter"></use>
-                                </svg>
-                                <span class="social__count social__count--twitter">15</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--vk">
-                                <svg class="social__icon social__icon--vk" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-vk"></use>
-                                </svg>
-                                <span class="social__count social__count--vk">16</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--yaru">
-                                <svg class="social__icon social__icon--yaru" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-yaru"></use>
-                                </svg>
-                                <span class="social__count social__count--yaru">1</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-                <p class="article__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at deleniti dolorem doloremque
-                    exercitationem fugit iste, labore laudantium libero minus necessitatibus non nostrum officia
-                    quibusdam quisquam repellat tempora temporibus veniam voluptas voluptatibus! Accusantium aspernatur
-                    atque eaque et ex ipsa libero numquam odit officia quod ratione sunt, unde.
+            <section class="info__note note note--nav note--nav-exclamation">
+                <div class="note__symbol note__symbol--exclamation">!</div>
+                <h2 class="note__header note__header--nav note__header--exclamation note__header--tablet">Some
+                    information</h2>
+                <p class="note__text--nav">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+                    aliquam, amet assumenda blanditiis consequatur cupiditate deserunt error expedita explicabo
+                    fugiat ipsum itaque magnam, maiores modi molestiae nobis, odit porro quaerat quasi quia
+                    recusandae reiciendis repellendus sed similique temporibus tenetur voluptates.
                 </p>
+                <svg class="note__icon-arrow" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-arrow"></use>
+                </svg>
+                <h2 class="note__header note__header--nav note__header--question note__header--mobile">Some
+                    information</h2>
             </section>
 
-            <section class="content__section article">
-                <div class="article__image-wrapper">
-                    <img src="images/post2.jpg" alt="post image" class="article__image">
-                </div>
-                <h2 class="article__header">Blogotitle about colorful</h2>
-                <div class="article__info-wrapper">
-                    <svg class="article__time-icon" aria-hidden="true">
-                        <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
+            <ul class="info__tags tags tags--mobile">
+                <div class="tags__symbol">
+                    <svg class="tags__icon-tag" aria-hidden="true">
+                        <use xlink:href="styles/sprites/sprite.svg#icon-tag"></use>
                     </svg>
-                    <time class="article__time">
-                        22:58 Jan 01, 2014
-                    </time>
-                    <svg class="article__author-icon" aria-hidden="true">
-                        <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
-                    </svg>
-                    <span class="article__author">E. Hyperraccoon</span>
-
-                    <ul class="article__social social">
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--facebook">
-                                <svg class="social__icon social__icon--facebook" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-facebook"></use>
-                                </svg>
-                                <span class="social__count social__count--facebook">16</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--gplus">
-                                <svg class="social__icon social__icon--gplus" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-gplus"></use>
-                                </svg>
-                                <span class="social__count social__count--gplus">7</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--twitter">
-                                <svg class="social__icon social__icon--twitter" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-twitter"></use>
-                                </svg>
-                                <span class="social__count social__count--twitter">15</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--vk">
-                                <svg class="social__icon social__icon--vk" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-vk"></use>
-                                </svg>
-                                <span class="social__count social__count--vk">16</span>
-                            </a>
-                        </li>
-                        <li class="social__element">
-                            <a href="" class="social__link social__link--yaru">
-                                <svg class="social__icon social__icon--yaru" aria-hidden="true">
-                                    <use xlink:href="styles/sprites/sprite.svg#icon-yaru"></use>
-                                </svg>
-                                <span class="social__count social__count--yaru">1</span>
-                            </a>
-                        </li>
-                    </ul>
-
                 </div>
-                <p class="article__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam cum ducimus excepturi in
-                    ipsum maiores possimus quibusdam <s> similique, voluptatibus! Architecto asperiores autem, culpa
-                    cumque debitis delectus dolore eaque est facilis </s> id itaque iure iusto laudantium nesciunt odit
-                    possimus quod rerum sunt tempora voluptatem. Blanditiis culpa dolor doloremque dolorum ipsa labore
-                    minima molestias mollitia nihil, quos, sapiente ullam, vitae. Inventore!
-                </p>
-            </section>
-        </main>
-
-        <aside class="center-block__aside">
-
-            <section class="note">
-                <div class="note__symbol">?</div>
-                <h2 class="note__header note__header--question">About</h2>
-                <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, enim esse eum
-                    facilis laudantium nihil optio perferendis quaerat qui repellat sed, sequi tempora tempore totam
-                    voluptatem? Alias aliquid amet animi assumenda autem beatae consequuntur cum eaque expedita illo
-                    nobis numquam praesentium quia saepe sequi, similique sunt voluptate? Beatae eius fuga praesentium
-                    quae quisquam quos recusandae ut. Labore.</p>
-            </section>
-
-            <section class="note">
-                <div class="note__symbol">!</div>
-                <h2 class="note__header note__header--exclamation">Some information</h2>
-                <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam,
-                    amet assumenda blanditiis consequatur cupiditate deserunt error expedita explicabo fugiat ipsum
-                    itaque magnam, maiores modi molestiae nobis, odit porro quaerat quasi quia recusandae reiciendis
-                    repellendus sed similique temporibus tenetur voluptates.
-                </p>
-            </section>
-
-            <ul class="tags">
                 <li class="tags__element">Raccoon</li>
                 <li class="tags__element">Raccoon</li>
                 <li class="tags__element">Coon</li>
@@ -266,10 +81,219 @@
                 <li class="tags__element">Dog</li>
                 <li class="tags__element">Cat</li>
                 <li class="tags__element">Developer</li>
+                <svg class="tags__icon-arrow" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-arrow"></use>
+                </svg>
             </ul>
-        </aside>
-    </div>
 
-    <script src="scripts/script.js"></script>
+            <ul class="info__navigation navigation navigation--mobile">
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">JavaScript</a></li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">CSS</a></li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">HTML</a></li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">Design</a></li>
+            </ul>
+        </div>
+    </section>
+</header>
+
+<ul class="tags tags--tablet">
+    <li class="tags__element">Raccoon</li>
+    <li class="tags__element">Raccoon</li>
+    <li class="tags__element">Coon</li>
+    <li class="tags__element">Dog</li>
+    <li class="tags__element">Cat</li>
+    <li class="tags__element">Developer</li>
+    <li class="tags__element">Raccoon</li>
+    <li class="tags__element">Raccoon</li>
+    <li class="tags__element">Coon</li>
+    <li class="tags__element">Dog</li>
+    <li class="tags__element">Cat</li>
+    <li class="tags__element">Developer</li>
+</ul>
+
+<div class="center-block">
+    <main class="center-block__content content">
+
+        <section class="content__section article">
+            <div class="article__image-wrapper">
+                <img src="images/post1.jpg" alt="post image" class="article__image">
+            </div>
+            <h2 class="article__header">Blogotitle of blogopost about blogoflowers</h2>
+            <div class="article__info-wrapper">
+                <svg class="article__time-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
+                </svg>
+                <time class="article__time">
+                    22:58 Jan 01, 2014
+                </time>
+                <svg class="article__author-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
+                </svg>
+                <span class="article__author">E. Hyperraccoon</span>
+
+                <ul class="article__social social">
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--facebook">
+                            <svg class="social__icon social__icon--facebook" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-facebook"></use>
+                            </svg>
+                            <span class="social__count social__count--facebook">16</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--gplus">
+                            <svg class="social__icon social__icon--gplus" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-gplus"></use>
+                            </svg>
+                            <span class="social__count social__count--gplus">7</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--twitter">
+                            <svg class="social__icon social__icon--twitter" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-twitter"></use>
+                            </svg>
+                            <span class="social__count social__count--twitter">15</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--vk">
+                            <svg class="social__icon social__icon--vk" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-vk"></use>
+                            </svg>
+                            <span class="social__count social__count--vk">16</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--yaru">
+                            <svg class="social__icon social__icon--yaru" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-yaru"></use>
+                            </svg>
+                            <span class="social__count social__count--yaru">1</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <p class="article__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at deleniti dolorem doloremque
+                exercitationem fugit iste, labore laudantium libero minus necessitatibus non nostrum officia
+                quibusdam quisquam repellat tempora temporibus veniam voluptas voluptatibus! Accusantium aspernatur
+                atque eaque et ex ipsa libero numquam odit officia quod ratione sunt, unde.
+            </p>
+        </section>
+
+        <section class="content__section article">
+            <div class="article__image-wrapper">
+                <img src="images/post2.jpg" alt="post image" class="article__image">
+            </div>
+            <h2 class="article__header">Blogotitle about colorful</h2>
+            <div class="article__info-wrapper">
+                <svg class="article__time-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-clock"></use>
+                </svg>
+                <time class="article__time">
+                    22:58 Jan 01, 2014
+                </time>
+                <svg class="article__author-icon" aria-hidden="true">
+                    <use xlink:href="styles/sprites/sprite.svg#icon-footstep"></use>
+                </svg>
+                <span class="article__author">E. Hyperraccoon</span>
+
+                <ul class="article__social social">
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--facebook">
+                            <svg class="social__icon social__icon--facebook" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-facebook"></use>
+                            </svg>
+                            <span class="social__count social__count--facebook">16</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--gplus">
+                            <svg class="social__icon social__icon--gplus" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-gplus"></use>
+                            </svg>
+                            <span class="social__count social__count--gplus">7</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--twitter">
+                            <svg class="social__icon social__icon--twitter" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-twitter"></use>
+                            </svg>
+                            <span class="social__count social__count--twitter">15</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--vk">
+                            <svg class="social__icon social__icon--vk" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-vk"></use>
+                            </svg>
+                            <span class="social__count social__count--vk">16</span>
+                        </a>
+                    </li>
+                    <li class="social__element">
+                        <a href="" class="social__link social__link--yaru">
+                            <svg class="social__icon social__icon--yaru" aria-hidden="true">
+                                <use xlink:href="styles/sprites/sprite.svg#icon-yaru"></use>
+                            </svg>
+                            <span class="social__count social__count--yaru">1</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <p class="article__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam cum ducimus excepturi in
+                ipsum maiores possimus quibusdam <s> similique, voluptatibus! Architecto asperiores autem, culpa
+                cumque debitis delectus dolore eaque est facilis </s> id itaque iure iusto laudantium nesciunt odit
+                possimus quod rerum sunt tempora voluptatem. Blanditiis culpa dolor doloremque dolorum ipsa labore
+                minima molestias mollitia nihil, quos, sapiente ullam, vitae. Inventore!
+            </p>
+        </section>
+    </main>
+
+    <aside class="center-block__aside">
+
+        <section class="note">
+            <div class="note__symbol">?</div>
+            <h2 class="note__header note__header--question">About</h2>
+            <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, enim esse eum
+                facilis laudantium nihil optio perferendis quaerat qui repellat sed, sequi tempora tempore totam
+                voluptatem? Alias aliquid amet animi assumenda autem beatae consequuntur cum eaque expedita illo
+                nobis numquam praesentium quia saepe sequi, similique sunt voluptate? Beatae eius fuga praesentium
+                quae quisquam quos recusandae ut. Labore.</p>
+        </section>
+
+        <section class="note">
+            <div class="note__symbol">!</div>
+            <h2 class="note__header note__header--exclamation">Some information</h2>
+            <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam,
+                amet assumenda blanditiis consequatur cupiditate deserunt error expedita explicabo fugiat ipsum
+                itaque magnam, maiores modi molestiae nobis, odit porro quaerat quasi quia recusandae reiciendis
+                repellendus sed similique temporibus tenetur voluptates.
+            </p>
+        </section>
+
+        <ul class="tags">
+            <li class="tags__element">Raccoon</li>
+            <li class="tags__element">Raccoon</li>
+            <li class="tags__element">Coon</li>
+            <li class="tags__element">Dog</li>
+            <li class="tags__element">Cat</li>
+            <li class="tags__element">Developer</li>
+            <li class="tags__element">Raccoon</li>
+            <li class="tags__element">Raccoon</li>
+            <li class="tags__element">Coon</li>
+            <li class="tags__element">Dog</li>
+            <li class="tags__element">Cat</li>
+            <li class="tags__element">Developer</li>
+        </ul>
+    </aside>
+</div>
+
+<script src="scripts/script.js"></script>
 </body>
 </html>

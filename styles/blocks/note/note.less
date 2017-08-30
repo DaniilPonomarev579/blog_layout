@@ -22,6 +22,11 @@
         //margin-top: -16px;
       }
     }
+
+    @media @mobile {
+      background: @mobile-menu-color;
+      padding: 0 3%;
+    }
   }
 
   &__symbol {
@@ -69,6 +74,7 @@
         border-right: 10px solid transparent;
         transition: border .2s;
       }
+
       &:hover {
         cursor: pointer;
 
@@ -100,7 +106,6 @@
       line-height: 34px;
       font-size: 1.25 * @baseFontSize;
       //margin: 0 2px;
-
       &::after {
         top: 34px;
       }
@@ -123,6 +128,20 @@
     }
   }
 
+  &__icon-arrow {
+    display: none;
+
+    @media @mobile {
+      display: inline-block;
+      position: static;
+      width: 45px;
+      height: 45px;
+      fill: #fff;
+      float: right;
+      cursor: pointer;
+    }
+  }
+
   &__header {
     position: relative;
     padding: 4px 0 1px 43px;
@@ -133,11 +152,9 @@
     font-size: 1.25 * @baseFontSize;
     text-transform: uppercase;
     color: @decor-dark;
-    //box-sizing: border-box;
-    //transition: height .5s;
 
     @media @tablet {
-      //display: none;
+      display: none;
       margin: 0;
       border: none;
       height: 54px;
@@ -145,12 +162,29 @@
       position: absolute;
       padding: 0 20px;
       &--nav {
-        //display: inline-block;
+        display: inline-block;
         background: lighten(@theme-shadow-color, 5%);
         opacity: 0;
-        transition: all 1s;
+        transition: opacity 1s, height 0s 1s;
         overflow: hidden;
         height: 0;
+      }
+    }
+
+    @media @mobile {
+      &--nav {
+        display: none;
+      }
+
+      &--mobile {
+        position: static;
+        float: right;
+        display: inline-block;
+        height: auto;
+        padding: 0;
+        opacity: 1;
+        background: transparent;
+        color: #fff;
       }
     }
 
@@ -185,7 +219,9 @@
       }
 
       @media @mobile {
-        top: 62px;
+        top: auto;
+        left: auto;
+        transform: none;
       }
     }
 
@@ -202,7 +238,9 @@
       }
 
       @media @mobile {
-        top: 130px;
+        top: auto;
+        left: auto;
+        transform: none;
       }
     }
   }
@@ -221,8 +259,8 @@
       }
 
       @media @mobile {
-        background: @mobile-menu-color;
         padding: 20px 3% 0;
+        background: transparent;
       }
     }
   }
