@@ -11,16 +11,10 @@
 
     @media @tablet {
       display: block;
-      //margin: 0 54px;
-      //width: ~"calc(100% - 108px)";
       height: 0;
       overflow: hidden;
       transition: height .5s ease-in-out;
       background: #fff;
-
-      &-exclamation {
-        //margin-top: -16px;
-      }
     }
 
     @media @mobile {
@@ -43,7 +37,6 @@
       font-weight: bold;
       font-size: 2 * @baseFontSize;
       text-align: center;
-      box-shadow: 0 4px 0 @theme-shadow-color;
 
       &::after {
         content: '';
@@ -54,7 +47,7 @@
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
-        border-top: 0px solid lighten(@theme-color, 10%);
+        border-top: 0 solid lighten(@theme-color, 10%);
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         transition: border .2s;
@@ -69,7 +62,7 @@
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
-        border-top: 0px solid @theme-shadow-color;
+        border-top: 0 solid @theme-shadow-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         transition: border .2s;
@@ -105,13 +98,21 @@
       height: 34px;
       line-height: 34px;
       font-size: 1.25 * @baseFontSize;
-      //margin: 0 2px;
+      box-shadow: inset @theme-color 0 2px, inset @theme-color 0 -2px;
+
       &::after {
-        top: 34px;
+        top: 32px;
+        border-top: 0 solid @theme-color;
       }
 
       &::before {
-        top: 38px;
+        top: 34px;
+      }
+
+      &:hover {
+        &::before {
+          border-top: 8px solid @theme-color;
+        }
       }
 
       &--question {
@@ -161,6 +162,7 @@
       line-height: 54px;
       position: absolute;
       padding: 0 20px;
+
       &--nav {
         display: inline-block;
         background: lighten(@theme-shadow-color, 5%);
@@ -247,14 +249,13 @@
 
   &__text {
     line-height: 1.125rem;
-    //box-sizing: border-box;
+
     &--nav {
       display: none;
 
       @media @tablet {
         display: block;
         background: #fff;
-        //width: ~"calc(100% - 108px)";
         padding: 20px 70px 0;
       }
 

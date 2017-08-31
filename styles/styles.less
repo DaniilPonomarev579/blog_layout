@@ -3,11 +3,13 @@
   src: local("PT Sans Narrow"),
   url("fonts/PT_Sans-Narrow-Web-Regular.ttf");
 }
+
 @font-face {
   font-family: "Josefin Sans";
   src: local("Josefin Sans"),
   url("fonts/JosefinSans-Light.ttf");
 }
+
 @font-face {
   font-family: "Trend-Sans-One";
   src: local("Trend-Sans-One"),
@@ -25,3 +27,10 @@
 @import "blocks/social/social.less";
 @import "blocks/note/note.less";
 @import "blocks/tags/tags.less";
+
+@media @ie {
+  svg {
+    background: url(../support/support-svg.jpg) 50% 50% no-repeat !important;
+    background-size: contain !important;
+  }
+}

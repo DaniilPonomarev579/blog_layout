@@ -5,7 +5,6 @@
     let textHeight;
     let header;
     let text;
-    let firstClick = true;
     let currentElement = null;
 
     function determineChildren(note) {
@@ -145,6 +144,7 @@
         }
 
         document.querySelector('.tags__symbol').addEventListener('click', clickTags);
+        document.querySelector('.navigation__symbol').addEventListener('click', clickTags);
         document.querySelector('.tags__icon-arrow').addEventListener('click', clickNoteSymbol);
     }
 

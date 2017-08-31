@@ -1,17 +1,15 @@
 @import "../../variables.less";
 
 .header {
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: flex-start;
   position: sticky;
   top: 0;
   z-index: 1;
-  //margin-bottom: 50px;
   width: 100%;
   margin-bottom: 52px;
-  //height: 40px;
-  //transition: all .5s ease-in-out;
+
+  @media @ie {
+    position: relative;
+  }
 
   @media @tablet {
     margin-bottom: 0;

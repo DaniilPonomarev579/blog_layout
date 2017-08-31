@@ -11,6 +11,7 @@
 
   @media @mobile {
     height: 34px;
+    box-shadow: none;
   }
 
   &--mobile {
@@ -18,10 +19,12 @@
 
     @media @mobile {
       display: flex;
-      margin-top: -40px;
+      //margin-top: -40px;
       flex-direction: column;
-      height: auto;
+      height: 0;
+      overflow: hidden;
       box-shadow: none;
+      transition: height 0.5s ease-in-out;
     }
   }
 
@@ -35,6 +38,10 @@
 
       &:last-child > .navigation__link {
         border: none;
+      }
+
+      &:hover {
+        background: @theme-shadow-color;
       }
     }
 
@@ -72,13 +79,21 @@
       border-bottom: 1px solid #fff;
       color: @theme-color;
       font-weight: bold;
+
+      &:hover {
+        background: none;
+      }
     }
 
     &--active {
       position: relative;
 
       @media @mobile {
+        background: radial-gradient(#fff 0%, rgba(174, 196, 220, 0) 50%);
 
+        &:hover {
+          background: radial-gradient(#fff 0%, rgba(174, 196, 220, 0) 50%);
+        }
       }
 
       &::after {
@@ -97,6 +112,7 @@
           display: none;
         }
       }
+
       &::before {
         content: '';
         display: block;
@@ -117,41 +133,32 @@
   }
 
   &__icon-menu {
+    width: 34px;
+    height: 34px;
+    fill: @mobile-menu-color;
+  }
+
+  &__symbol {
     display: none;
 
     @media @mobile {
-      display: inline-block;
+      display: block;
       width: 34px;
       height: 34px;
-      fill: @mobile-menu-color;
       position: absolute;
       right: 0;
+      top: 0;
 
       &::after {
         content: '';
         z-index: 2;
         display: block;
         position: absolute;
-        top: 34px;
+        top: 32px;
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
-        border-top: 0px solid lighten(@theme-color, 10%);
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        transition: border .2s;
-      }
-
-      &::before {
-        content: '';
-        z-index: 2;
-        display: block;
-        position: absolute;
-        top: 38px;
-        left: ~"calc(50% - 10px)";
-        width: 0;
-        height: 0;
-        border-top: 0px solid @theme-shadow-color;
+        border-top: 0 solid @theme-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         transition: border .2s;
@@ -161,7 +168,7 @@
         cursor: pointer;
 
         &::after {
-          border-top: 8px solid lighten(@theme-color, 10%);
+          border-top: 8px solid @theme-color;
         }
 
         &::before {

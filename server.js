@@ -3,7 +3,7 @@ var static = require('node-static');
 var file = new static.Server('.');
 var PORT_NUMBER = 8080;
 
-http.createServer(function(req, res) {
+http.createServer(function (req, res) {
     file.serve(req, res);
 }).listen(PORT_NUMBER);
 

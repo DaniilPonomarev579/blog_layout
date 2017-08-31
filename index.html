@@ -26,9 +26,6 @@
         <li class="navigation__element"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
         <li class="navigation__element"><a href="" class="navigation__link">HTML</a></li>
         <li class="navigation__element"><a href="" class="navigation__link">Design</a></li>
-        <svg class="navigation__icon-menu" aria-hidden="true">
-            <use xlink:href="styles/sprites/sprite.svg#icon-menu"></use>
-        </svg>
     </ul>
 
     <section class="info">
@@ -87,11 +84,22 @@
             </ul>
 
             <ul class="info__navigation navigation navigation--mobile">
-                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">JavaScript</a></li>
-                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">CSS</a></li>
-                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link navigation__link--active">Latest</a></li>
-                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">HTML</a></li>
-                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">Design</a></li>
+                <div class="navigation__symbol">
+                    <svg class="navigation__icon-menu" aria-hidden="true">
+                        <use xlink:href="styles/sprites/sprite.svg#icon-menu"></use>
+                    </svg>
+                </div>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">JavaScript</a>
+                </li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">CSS</a>
+                </li>
+                <li class="navigation__element navigation__element--mobile"><a href=""
+                                                                               class="navigation__link navigation__link--active">Latest</a>
+                </li>
+                <li class="navigation__element navigation__element--mobile"><a href="" class="navigation__link">HTML</a>
+                </li>
+                <li class="navigation__element navigation__element--mobile"><a href=""
+                                                                               class="navigation__link">Design</a></li>
             </ul>
         </div>
     </section>

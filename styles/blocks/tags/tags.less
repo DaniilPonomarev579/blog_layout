@@ -22,14 +22,13 @@
 
     @media @mobile {
       display: block;
-      //margin: 40px 40px 30px;
       text-align: center;
       height: 0;
       overflow: hidden;
       transition: height .5s ease-in-out;
-      //padding: 40px 3% 30px;
       background: @mobile-menu-color;
-      padding: 40px 3% 0px;
+      padding: 40px 3% 0;
+      margin-bottom: -40px;
     }
   }
 
@@ -42,6 +41,7 @@
     margin: 0 11px 4px 0;
     background: @decor-dark;
     color: #fff;
+
     &::before {
       content: '';
       display: block;
@@ -52,6 +52,7 @@
       border-top: 0.625rem solid transparent;
       border-bottom: 0.625rem solid transparent;
     }
+
     &::after {
       content: '';
       display: block;
@@ -63,9 +64,11 @@
       border-radius: 50%;
       background: #fff;
     }
+
     &:hover {
       cursor: pointer;
       background: darken(@decor-dark, 5%);
+
       &::before {
         border-left: 0.625rem solid darken(@decor-dark, 5%);
       }
@@ -85,11 +88,7 @@
       background: lighten(@theme-color, 10%);
       color: @theme-color;
       line-height: 34px;
-      //font-family: @header-font;
-      //font-weight: bold;
-      //font-size: 1.25 * @baseFontSize;
       text-align: center;
-      box-shadow: 0 4px 0 @theme-shadow-color;
 
       &::after {
         content: '';
@@ -100,7 +99,7 @@
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
-        border-top: 0px solid lighten(@theme-color, 10%);
+        border-top: 0 solid lighten(@theme-color, 10%);
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         transition: border .2s;
@@ -115,7 +114,7 @@
         left: ~"calc(50% - 10px)";
         width: 0;
         height: 0;
-        border-top: 0px solid @theme-shadow-color;
+        border-top: 0 solid @theme-shadow-color;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         transition: border .2s;
@@ -130,6 +129,25 @@
 
         &::before {
           border-top: 8px solid @theme-shadow-color;
+        }
+      }
+    }
+
+    @media @mobile {
+      box-shadow: inset @theme-color 0 2px, inset @theme-color 0 -2px;
+
+      &::after {
+        top: 32px;
+        border-top: 0 solid @theme-color;
+      }
+
+      &::before {
+        top: 34px;
+      }
+
+      &:hover {
+        &::before {
+          border-top: 8px solid @theme-color;
         }
       }
     }
